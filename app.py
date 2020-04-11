@@ -70,7 +70,7 @@ def login():
             flash('密码错误,请重新输入！')
             return render_template('login.html')
         else:
-            flash('该用户不存在，请重新输入！')
+            flash('该用户不存在，请何查用户名！')
             return render_template('login.html')
 
 
