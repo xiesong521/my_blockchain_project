@@ -3,9 +3,11 @@
 """
     Author:XieSong
     Email:18406508513@163.com
-    
+
     Copyright:XieSong
     Licence:MIT
 
 """
-print(__name__)
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
