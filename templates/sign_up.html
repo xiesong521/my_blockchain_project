@@ -1,28 +1,3 @@
-<!--<html>-->
-<!--<head>-->
-    <!--<style>-->
-        <!--.alert {-->
-            <!--color: red;-->
-            <!--text-align: center;-->
-        <!--}-->
-    <!--</style>-->
-
-<!--</head>-->
-<!--<body>-->
-<!--<h1>Login</h1>-->
-     <!--{% for message in get_flashed_messages() %}-->
-         <!--<div class="alert">{{ message }}</div>-->
-     <!--{% endfor %}-->
-    <!--<form action="{{ url_for('login') }}" method="post">-->
-        <!--<table>-->
-            <!--<tr><td>用户名：</td><td><input type="text" name="name" /></td></tr>-->
-            <!--<tr><td>密码：</td><td><input type="password" name="password" /></td>-->
-            <!--<tr><td>&nbsp;</td><td><input type="submit" name="submit" value="Submit" /></td></tr>-->
-        <!--</table>-->
-    <!--</form>-->
-<!--</body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="BlockChain Track">
-    <!-- Website Title -->
-    <title>Log In - Track- System</title>
+    <meta name="description" content="Tivo is a free HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
 
-    <style>
-        .alert {
-            color: gray;
-            text-align: center;
-        }
-    </style>
+
+    <!-- Website Title -->
+    <title>Sign Up Track </title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -70,10 +40,9 @@
         <div class="container">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-             <a class="navbar-brand logo-text page-scroll" href="index.html">Track</a>
+             <h2 class="navbar-brand logo-text page-scroll" href="index.html">Track</h2>
 
-            <!-- Image Logo -->
-            <!--<a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+
 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,6 +56,7 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#">HOME <span class="sr-only">(current)</span></a>
                     </li>
+
                 </ul>
                 <span class="nav-item">
                     <a class="btn-outline-sm" href="{{ url_for('login') }}">LOG IN</a>
@@ -102,37 +72,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Log In</h1>
-                   <p>You don't have a password? Then please <a class="white" href="{{ url_for('sign_up') }}">Sign Up</a></p>
-
-
-                    <!-- login Form -->
-
+                    <h1>Sign Up</h1>
+                   <p>Fill out the form below to sign up for Track. Already signed up? Then just <a class="white" href="{{ url_for('login') }}">Log In</a></p>
+                    <!-- Sign Up Form -->
                     <div class="form-container">
-
-                    {% for message in get_flashed_messages() %}
-                    <div class="alert">{{ message }}</div>
-                    {% endfor %}
-                        <form id="logInForm" data-toggle="validator" data-focus="false" action="{{ url_for('login') }}"  method="post">
+                        <form id="signUpForm" data-toggle="validator" data-focus="false" action="">
                             <div class="form-group">
-                                <input type="text" name="username" class="form-control-input" id="lusername" required>
-                                <label class="label-control" for="lusername">Username</label>
+                                <input type="email" name="email" class="form-control-input" id="semail" required>
+                                <label class="label-control" for="semail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" class="form-control-input" id="lpassword" required>
-                                <label class="label-control" for="lpassword">Password</label>
+                                <input type="text" name="username" class="form-control-input" id="sname" required>
+                                <label class="label-control" for="sname">Name</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">LOG IN</button>
+                                <input type="password" name="password" class="form-control-input" id="spassword" required>
+                                <label class="label-control" for="spassword">Password</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="sterms" value="Agreed-to-Terms" required>I agree with Tivo's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">SIGN UP</button>
                             </div>
                             <div class="form-message">
-                                <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                                <div id="smsgSubmit" class="h3 text-center hidden"></div>
                             </div>
                         </form>
                     </div> <!-- end of form container -->
-                    <!-- end of login form -->
+                    <!-- end of sign up form -->
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -148,7 +120,7 @@
     <script src="static/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="static/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="static/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <!--<script src="static/js/validator.min.js"></script> &lt;!&ndash; Validator.js - Bootstrap plugin that validates forms &ndash;&gt;-->
+    <script src="static/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="static/js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 </html>
